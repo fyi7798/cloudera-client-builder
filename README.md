@@ -13,7 +13,9 @@ The program requires that maven be installed and of course working. It uses mave
 
 
 versions.txt
+
 Format:
+
 zip-prefix cdh-version hive-version pig-version
 
 
