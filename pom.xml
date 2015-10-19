@@ -5,45 +5,329 @@
 	<groupId>com.cloudera</groupId>
 	<artifactId>client-dependencies</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+    <properties>
+    <cdh.version>2.6.0-cdh5.4.5</cdh.version>
+        <cdh.hive.version>1.1.0-cdh5.4.5</cdh.hive.version>
+		<cdh.parent.version>5.4.5</cdh.parent.version>
+		<cdh.hadoop.version>2.6.0-cdh5.4.5</cdh.hadoop.version>
+		<cdh.mr1.version>2.6.0-mr1-cdh5.4.5</cdh.mr1.version>
+		<cdh.zookeeper.version>3.4.5-cdh5.4.5</cdh.zookeeper.version>
+		<cdh.hbase.version>1.0.0-cdh5.4.5</cdh.hbase.version>
+		<cdh.pig.version>0.12.0-cdh5.4.5</cdh.pig.version>
+		<cdh.sqoop.version>1.4.5-cdh5.4.5</cdh.sqoop.version>
+		<cdh.sqoop2.version>1.99.5-cdh5.4.5</cdh.sqoop2.version>
+		<cdh.hive.version>1.1.0-cdh5.4.5</cdh.hive.version>
+		<cdh.oozie.version>4.1.0-cdh5.4.5</cdh.oozie.version>
+		<cdh.whirr.version>0.9.0-cdh5.4.5</cdh.whirr.version>
+		<cdh.flume.version>0.9.4-cdh5.4.5</cdh.flume.version>
+		<cdh.flume-ng.version>1.5.0-cdh5.4.5</cdh.flume-ng.version>
+		<cdh.mahout.version>0.9-cdh5.4.5</cdh.mahout.version>
+		<cdh.hue.version>3.7.0-cdh5.4.5</cdh.hue.version>
+		<cdh.datafu.version>1.1.0-cdh5.4.5</cdh.datafu.version>
+		<cdh.solr.version>4.10.3-cdh5.4.5</cdh.solr.version>
+		<cdh.search.version>1.0.0-cdh5.4.5</cdh.search.version>
+		<cdh.hbase-solr.version>1.5-cdh5.4.5</cdh.hbase-solr.version>
+		<cdh.kite.version>1.0.0-cdh5.4.5</cdh.kite.version>
+		<cdh.impala.version>2.2.0-cdh5.4.5</cdh.impala.version>
+		<cdh.llama.version>1.0.0-cdh5.4.5</cdh.llama.version>
+		<cdh.cdh-parcel.version>5.4.5</cdh.cdh-parcel.version>
+		<cdh.sentry.version>1.4.0-cdh5.4.5</cdh.sentry.version>
+		<cdh.parquet.version>1.5.0-cdh5.4.5</cdh.parquet.version>
+		<cdh.parquet-format.version>2.1.0-cdh5.4.5</cdh.parquet-format.version>
+		<cdh.spark.version>1.3.0-cdh5.4.5</cdh.spark.version>
+		<cdh.crunch.version>0.11.0-cdh5.4.5</cdh.crunch.version>
+		<cdh.avro.version>1.7.6-cdh5.4.5</cdh.avro.version>
+    </properties>
 
-	<dependencies>
+    <dependencies>
+
+		<dependency>
+		<groupId>org.apache.hadoop</groupId>
+		<artifactId>hadoop-yarn-applications-unmanaged-am-launcher</artifactId>
+		<version>${cdh.version}</version>
+		<!--	<scope>runtime</scope> -->
+	</dependency>
 
 		<dependency>
 			<groupId>org.apache.hadoop</groupId>
-			<artifactId>hadoop-core</artifactId>
-			<version>${mr.version}</version>
+			<artifactId>hadoop-yarn-applications-distributedshell</artifactId>
+			<version>${cdh.version}</version>
+			<!--	<scope>runtime</scope> -->
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.hadoop</groupId>
+			<artifactId>hadoop-azure</artifactId>
+			<version>${cdh.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.hadoop</groupId>
+			<artifactId>hadoop-hdfs-nfs</artifactId>
+			<version>${cdh.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.hive</groupId>
+			<artifactId>hive-beeline</artifactId>
+			<version>${cdh.hive.version}</version>
 			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.cloudera.cdh</groupId>
+			<artifactId>hadoop-root</artifactId>
+			<version>${cdh.mr1.version}</version>
+			<type>pom</type>
+		</dependency>
+		<dependency>
+			<groupId>com.cloudera.cdh</groupId>
+			<artifactId>hadoop-ant</artifactId>
+			<version>${cdh.mr1.version}</version>
+			<type>pom</type>
+		</dependency>
+		<dependency>
+			<groupId>com.cloudera.cdh</groupId>
+			<artifactId>zookeeper-root</artifactId>
+			<version>${cdh.zookeeper.version}</version>
+			<type>pom</type>
+		</dependency>
+		<dependency>
+			<groupId>com.cloudera.cdh</groupId>
+			<artifactId>zookeeper-ant</artifactId>
+			<version>${cdh.zookeeper.version}</version>
+			<type>pom</type>
+		</dependency>
+
+		<!-- Hbase -->
+		<dependency>
+			<groupId>org.apache.hbase</groupId>
+			<artifactId>hbase-common</artifactId>
+			<version>${cdh.hbase.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.hbase</groupId>
+			<artifactId>hbase-protocol</artifactId>
+			<version>${cdh.hbase.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.hbase</groupId>
+			<artifactId>hbase-hadoop-compat</artifactId>
+			<version>${cdh.hbase.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.hbase</groupId>
+			<artifactId>hbase-hadoop2-compat</artifactId>
+			<version>${cdh.hbase.version}</version>
+		</dependency>
+		<dependency>
+			<artifactId>hbase-server</artifactId>
+			<groupId>org.apache.hbase</groupId>
+			<version>${cdh.hbase.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.hbase</groupId>
+			<artifactId>hbase-prefix-tree</artifactId>
+			<version>${cdh.hbase.version}</version>
+		</dependency>
+		<dependency>
+			<artifactId>hbase-examples</artifactId>
+			<groupId>org.apache.hbase</groupId>
+			<version>${cdh.hbase.version}</version>
+		</dependency>
+		<dependency>
+			<artifactId>hbase-it</artifactId>
+			<groupId>org.apache.hbase</groupId>
+			<version>${cdh.hbase.version}</version>
+		</dependency>
+		<dependency>
+			<artifactId>hbase-client</artifactId>
+			<groupId>org.apache.hbase</groupId>
+			<version>${cdh.hbase.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.hadoop</groupId>
+			<artifactId>hadoop-mapreduce-client-common</artifactId>
+			<version>${cdh.version}</version>
+
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.hadoop</groupId>
+			<artifactId>hadoop-mapreduce-client-core</artifactId>
+			<version>${cdh.version}</version>
+
+		</dependency>
+		<dependency>
+			<groupId>org.apache.hadoop</groupId>
+			<artifactId>hadoop-mapreduce-client-jobclient</artifactId>
+			<version>${cdh.version}</version>
+
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.hadoop</groupId>
+			<artifactId>hadoop-mapreduce-examples</artifactId>
+			<version>${cdh.version}</version>
+
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.hadoop</groupId>
+			<artifactId>hadoop-nfs</artifactId>
+			<version>${cdh.version}</version>
+
+		</dependency>
+		<dependency>
+			<groupId>org.apache.hadoop</groupId>
+			<artifactId>hadoop-aws</artifactId>
+			<version>${cdh.version}</version>
+
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.hive</groupId>
+			<artifactId>hive-exec</artifactId>
+			<version>${cdh.hive.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.hive</groupId>
+			<artifactId>hive-jdbc</artifactId>
+			<version>${cdh.hive.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.hive</groupId>
+			<artifactId>hive-jdbc</artifactId>
+			<version>1.1.0-cdh5.4.5</version>
+			<classifier>standalone</classifier>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.hive.hcatalog</groupId>
+			<artifactId>hive-hcatalog-core</artifactId>
+			<version>${cdh.hive.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.hive.hcatalog</groupId>
+			<artifactId>hive-hcatalog-pig-adapter</artifactId>
+			<version>${cdh.hive.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.hadoop</groupId>
+			<artifactId>hadoop-yarn-registry</artifactId>
+			<version>${cdh.version}</version>
+
 		</dependency>
 		<dependency>
 			<groupId>org.apache.hadoop</groupId>
 			<artifactId>hadoop-common</artifactId>
 			<version>${cdh.version}</version>
-			<scope>runtime</scope>
 		</dependency>
+		<dependency>
+			<groupId>asm</groupId>
+			<artifactId>asm</artifactId>
+			<version>3.2</version>
+		</dependency>
+		<dependency>
+			<groupId>com.twitter</groupId>
+			<artifactId>parquet-scrooge_2.10</artifactId>
+			<version>${cdh.parquet.version}</version>
+
+		</dependency>
+		<dependency>
+			<groupId>com.twitter</groupId>
+			<artifactId>parquet-avro</artifactId>
+			<version>${cdh.parquet.version}</version>
+
+		</dependency>
+		<dependency>
+			<groupId>com.twitter</groupId>
+			<artifactId>parquet-pig-bundle</artifactId>
+			<version>${cdh.parquet.version}</version>
+
+		</dependency>
+		<dependency>
+			<groupId>com.twitter</groupId>
+			<artifactId>parquet-protobuf</artifactId>
+			<version>${cdh.parquet.version}</version>
+
+		</dependency>
+		<dependency>
+			<groupId>com.twitter</groupId>
+			<artifactId>parquet-scala_2.10</artifactId>
+			<version>${cdh.parquet.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.twitter</groupId>
+			<artifactId>parquet-scrooge_2.10</artifactId>
+			<version>${cdh.parquet.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.twitter</groupId>
+			<artifactId>parquet-test-hadoop2</artifactId>
+			<version>${cdh.parquet.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.twitter</groupId>
+			<artifactId>parquet-thrift</artifactId>
+			<version>${cdh.parquet.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.twitter</groupId>
+			<artifactId>parquet-tools</artifactId>
+			<version>${cdh.parquet.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.cloudera.hue</groupId>
+			<artifactId>hue-plugins</artifactId>
+			<version>${cdh.hue.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.spark</groupId>
+			<artifactId>spark-assembly_2.10</artifactId>
+			<version>${cdh.spark.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.spark</groupId>
+			<artifactId>spark-network-shuffle_2.10</artifactId>
+			<version>${cdh.spark.version}</version>
+		</dependency>
+
 		<dependency>
 			<groupId>org.apache.hadoop</groupId>
-			<artifactId>hadoop-client</artifactId>
+			<artifactId>hadoop-yarn-server-tests</artifactId>
 			<version>${cdh.version}</version>
-			<scope>runtime</scope>
+
+		</dependency>
+
+		<dependency>
+			<groupId>javax.xml.bind</groupId>
+			<artifactId>jaxb-api</artifactId>
+			<version>2.2.2</version>
 		</dependency>
 		<dependency>
-			<groupId>org.apache.hive</groupId>
-			<artifactId>hive-jdbc</artifactId>
-			<version>${hive.version}</version>
-			<scope>runtime</scope>
+			<groupId>jline</groupId>
+			<artifactId>jline</artifactId>
+			<version>2.11</version>
 		</dependency>
 		<dependency>
-			<groupId>org.apache.hadoop</groupId>
-			<artifactId>hadoop-auth</artifactId>
-			<version>${cdh.version}</version>
-			<scope>runtime</scope>
+			<groupId>org.apache.curator</groupId>
+			<artifactId>curator-framework</artifactId>
+			<version>2.7.1</version>
 		</dependency>
-                <dependency>
-                        <groupId>org.apache.pig</groupId>
-                        <artifactId>pig</artifactId>
-                        <version>${pig.version}</version>
-                        <scope>runtime</scope>
-                </dependency>
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-all</artifactId>
+			<version>1.8.5</version>
+		</dependency>
+		<dependency>
+			<groupId>postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>9.0-801.jdbc4</version>
+		</dependency>
+		<dependency>
+			<groupId>org.xerial.snappy</groupId>
+			<artifactId>snappy-java</artifactId>
+			<version>1.0.4.1</version>
+		</dependency>
 
 	</dependencies>
 
@@ -76,7 +360,7 @@
 							<overWriteSnapshots>false</overWriteSnapshots>
 							<overWriteIfNewer>true</overWriteIfNewer>
 							<includeScope>runtime</includeScope>
-							<excludeGroupIds>org.datanucleus,org.apache.derby,org.apache.tomcat.jasper,org.mockito,org.apache.geronimo</excludeGroupIds>
+							<excludeGroupIds>org.datanucleus,org.apache.derby,org.apache.tomcat.jasper,org.apache.geronimo</excludeGroupIds>
 						</configuration>
 					</execution>
 				</executions>
@@ -104,8 +388,9 @@
 	<repositories>
 		<repository>
 			<id>cdh.repo</id>
-			<url>https://repository.cloudera.com/artifactory/cloudera-repos</url>
+			<url>https://repository.cloudera.com/cloudera/cloudera-repos</url>
 			<name>Cloudera Repository</name>
 		</repository>
+
 	</repositories>
 </project>

@@ -1,21 +1,146 @@
-4.2.0 2.0.0-cdh4.2.0 2.0.0-mr1-cdh4.2.0 0.10.0-cdh4.2.0 0.10.0-cdh4.2.0
-4.2.1 2.0.0-cdh4.2.1 2.0.0-mr1-cdh4.2.1 0.10.0-cdh4.2.1 0.10.0-cdh4.2.1
-4.2.2 2.0.0-cdh4.2.2 2.0.0-mr1-cdh4.2.2 0.10.0-cdh4.2.2 0.10.0-cdh4.2.2
-4.3.0 2.0.0-cdh4.3.0 2.0.0-mr1-cdh4.3.0 0.10.0-cdh4.3.0 0.11.0-cdh4.3.0
-4.3.1 2.0.0-cdh4.3.1 2.0.0-mr1-cdh4.3.1 0.10.0-cdh4.3.1 0.11.0-cdh4.3.1
-4.3.2 2.0.0-cdh4.3.2 2.0.0-mr1-cdh4.3.2 0.10.0-cdh4.3.2 0.11.0-cdh4.3.2
-4.4.0 2.0.0-cdh4.4.0 2.0.0-mr1-cdh4.4.0 0.10.0-cdh4.4.0 0.11.0-cdh4.4.0
-4.5.0 2.0.0-cdh4.5.0 2.0.0-mr1-cdh4.5.0 0.10.0-cdh4.5.0 0.11.0-cdh4.5.0
-4.6.0 2.0.0-cdh4.6.0 2.0.0-mr1-cdh4.6.0 0.10.0-cdh4.6.0 0.11.0-cdh4.6.0
-5.0.0 2.3.0-cdh5.0.0 2.3.0-mr1-cdh5.0.0 0.12.0-cdh5.0.0 0.12.0-cdh5.0.0
-5.0.1 2.3.0-cdh5.0.1 2.3.0-mr1-cdh5.0.1 0.12.0-cdh5.0.1 0.12.0-cdh5.0.1
-5.0.2 2.3.0-cdh5.0.2 2.3.0-mr1-cdh5.0.2 0.12.0-cdh5.0.2 0.12.0-cdh5.0.2
-5.0.3 2.3.0-cdh5.0.3 2.3.0-mr1-cdh5.0.3 0.12.0-cdh5.0.3 0.12.0-cdh5.0.3
-5.0.4 2.3.0-cdh5.0.4 2.3.0-mr1-cdh5.0.4 0.12.0-cdh5.0.4 0.12.0-cdh5.0.4
-5.1.0 2.3.0-cdh5.1.0 2.3.0-mr1-cdh5.1.0 0.12.0-cdh5.1.0 0.12.0-cdh5.1.0
-5.1.2 2.3.0-cdh5.1.2 2.3.0-mr1-cdh5.1.2 0.12.0-cdh5.1.2 0.12.0-cdh5.1.2
-5.1.3 2.3.0-cdh5.1.3 2.3.0-mr1-cdh5.1.3 0.12.0-cdh5.1.3 0.12.0-cdh5.1.3
-5.2.0 2.5.0-cdh5.2.0 2.5.0-mr1-cdh5.2.0 0.13.1-cdh5.2.0 0.12.0-cdh5.2.0
-5.2.1 2.5.0-cdh5.2.1 2.5.0-mr1-cdh5.2.1 0.13.1-cdh5.2.1 0.12.0-cdh5.2.1
-5.3.3 2.5.0-cdh5.3.3 2.5.0-mr1-cdh5.3.3 0.13.1-cdh5.3.3 0.12.0-cdh5.3.3
-5.4.2 2.6.0-cdh5.4.2 2.6.0-mr1-cdh5.4.2 1.1.0-cdh5.4.2  0.12.0-cdh5.4.2
+activation-1.1.jar
+antlr-runtime-3.4.jar
+aopalliance-1.0.jar
+apacheds-i18n-2.0.0-M15.jar
+apacheds-kerberos-codec-2.0.0-M15.jar
+api-asn1-api-1.0.0-M20.jar
+api-util-1.0.0-M20.jar
+asm-3.2.jar
+avro-1.7.6-cdh5.4.5.jar
+aws-java-sdk-1.7.14.jar
+calcite-avatica-1.0.0-incubating.jar
+calcite-core-1.0.0-incubating.jar
+calcite-linq4j-1.0.0-incubating.jar
+commons-beanutils-1.7.0.jar
+commons-beanutils-core-1.8.0.jar
+commons-cli-1.2.jar
+commons-codec-1.4.jar
+commons-collections-3.2.1.jar
+commons-compress-1.4.1.jar
+commons-configuration-1.6.jar
+commons-daemon-1.0.13.jar
+commons-digester-1.8.jar
+commons-el-1.0.jar
+commons-httpclient-3.1.jar
+commons-io-2.4.jar
+commons-lang-2.6.jar
+commons-logging-1.1.3.jar
+commons-math3-3.1.1.jar
+commons-net-3.1.jar
+curator-client-2.7.1.jar
+curator-framework-2.7.1.jar
+curator-recipes-2.7.1.jar
+exclusionlist
+gson-2.2.4.jar
+guava-11.0.2.jar
+guice-3.0.jar
+guice-servlet-3.0.jar
+hadoop-annotations-2.6.0-cdh5.4.5.jar
+hadoop-auth-2.6.0-cdh5.4.5.jar
+hadoop-aws-2.6.0-cdh5.4.5.jar
+hadoop-azure-2.6.0-cdh5.4.5.jar
+hadoop-common-2.6.0-cdh5.4.5-tests.jar
+hadoop-common-2.6.0-cdh5.4.5.jar
+hadoop-hdfs-2.6.0-cdh5.4.5-tests.jar
+hadoop-hdfs-2.6.0-cdh5.4.5.jar
+hadoop-hdfs-nfs-2.6.0-cdh5.4.5.jar
+hadoop-mapreduce-client-common-2.6.0-cdh5.4.5.jar
+hadoop-mapreduce-client-core-2.6.0-cdh5.4.5.jar
+hadoop-mapreduce-client-jobclient-2.6.0-cdh5.4.5.jar
+hadoop-mapreduce-examples-2.6.0-cdh5.4.5.jar
+hadoop-nfs-2.6.0-cdh5.4.5.jar
+hadoop-yarn-api-2.6.0-cdh5.4.5.jar
+hadoop-yarn-applications-distributedshell-2.6.0-cdh5.4.5.jar
+hadoop-yarn-applications-unmanaged-am-launcher-2.6.0-cdh5.4.5.jar
+hadoop-yarn-client-2.6.0-cdh5.4.5.jar
+hadoop-yarn-common-2.6.0-cdh5.4.5.jar
+hadoop-yarn-registry-2.6.0-cdh5.4.5.jar
+hadoop-yarn-server-applicationhistoryservice-2.6.0-cdh5.4.5.jar
+hadoop-yarn-server-common-2.6.0-cdh5.4.5.jar
+hadoop-yarn-server-nodemanager-2.6.0-cdh5.4.5.jar
+hadoop-yarn-server-resourcemanager-2.6.0-cdh5.4.5.jar
+hadoop-yarn-server-tests-2.6.0-cdh5.4.5.jar
+hadoop-yarn-server-web-proxy-2.6.0-cdh5.4.5.jar
+hamcrest-core-1.3.jar
+hbase-annotations-1.0.0-cdh5.4.5.jar
+hbase-client-1.0.0-cdh5.4.5.jar
+hbase-common-1.0.0-cdh5.4.5.jar
+hbase-protocol-1.0.0-cdh5.4.5.jar
+hbase-server-1.0.0-cdh5.4.5.jar
+hive-beeline-1.1.0-cdh5.4.5.jar
+hive-cli-1.1.0-cdh5.4.5.jar
+hive-exec-1.1.0-cdh5.4.5.jar
+hive-hcatalog-core-1.1.0-cdh5.4.5.jar
+hive-jdbc-1.1.0-cdh5.4.5-standalone.jar
+htrace-core-3.0.4.jar
+htrace-core-3.1.0-incubating.jar
+httpclient-4.2.5.jar
+httpcore-4.2.5.jar
+hue-plugins-3.7.0-cdh5.4.5.jar
+jackson-core-asl-1.8.8.jar
+jackson-jaxrs-1.8.8.jar
+jackson-mapper-asl-1.8.8.jar
+jackson-xc-1.8.8.jar
+jasper-compiler-5.5.23.jar
+jasper-runtime-5.5.23.jar
+java-xmlbuilder-0.4.jar
+javax.inject-1.jar
+jaxb-api-2.2.2.jar
+jaxb-impl-2.2.3-1.jar
+jersey-client-1.9.jar
+jersey-core-1.9.jar
+jersey-guice-1.9.jar
+jersey-json-1.9.jar
+jersey-server-1.9.jar
+jets3t-0.9.0.jar
+jettison-1.1.jar
+jetty-6.1.26.cloudera.4.jar
+jetty-util-6.1.26.cloudera.4.jar
+jline-2.11.jar
+jruby-cloudera-1.0.0.jar
+jsch-0.1.42.jar
+jsp-api-2.1.jar
+jsr305-3.0.0.jar
+junit-4.11.jar
+leveldbjni-all-1.8.jar
+libfb303-0.9.2.jar
+libthrift-0.9.2.jar
+log4j-1.2.17.jar
+logredactor-1.0.3.jar
+mockito-all-1.8.5.jar
+netty-3.6.2.Final.jar
+paranamer-2.3.jar
+parquet-avro.jar
+parquet-cascading.jar
+parquet-column.jar
+parquet-common.jar
+parquet-encoding.jar
+parquet-format-javadoc.jar
+parquet-format-sources.jar
+parquet-format.jar
+parquet-generator.jar
+parquet-hadoop-bundle.jar
+parquet-hadoop.jar
+parquet-jackson.jar
+parquet-pig-bundle.jar
+parquet-pig.jar
+parquet-protobuf.jar
+parquet-scala_2.10.jar
+parquet-scrooge_2.10.jar
+parquet-test-hadoop2.jar
+parquet-thrift.jar
+parquet-tools.jar
+pig-0.12.0-cdh5.4.5-withouthadoop.jar
+postgresql-9.0-801.jdbc4.jar
+protobuf-java-2.5.0.jar
+servlet-api-2.5.jar
+slf4j-api-1.7.5.jar
+slf4j-log4j12-1.7.5.jar
+snappy-java-1.0.4.1.jar
+spark-1.3.0-cdh5.4.5-yarn-shuffle.jar
+spark-assembly-1.3.0-cdh5.4.5-hadoop2.6.0-cdh5.4.5.jar
+stax-api-1.0-2.jar
+super-csv-2.2.0.jar
+xmlenc-0.52.jar
+xz-1.0.jar
+zookeeper-3.4.5-cdh5.4.5.jar
